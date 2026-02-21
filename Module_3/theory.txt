@@ -1,0 +1,7 @@
+This module is based on Object Oriented Programming(OOP)
+
+1. OOP is used for organizing code simply
+
+Classes:
+Class is like blueprint of Object.
+class use kore notun notun object create kora jai.
