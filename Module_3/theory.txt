@@ -5,3 +5,39 @@ This module is based on Object Oriented Programming(OOP)
 Classes:
 Class is like blueprint of Object.
 class use kore notun notun object create kora jai.
+
+Class within a function is called method in OOP.
+
+Examople of class:
+
+class student:  # here student is class name
+ roll = ""
+ gpa = ""
+
+to call the class:
+kamal = student()
+kamal.roll = 10
+kamal.gpa = 3.9
+print(f"Roll = {kamal.roll}, GPA = {kamal.gpa}") evabe likha hoy 
+
+
+
+Constructor:
+we use constructor to initialize class variable.
+constructor can be parameterized or default.
+
+
+
+
+
+Pass Statement:
+kono class ba method banai rekhe niche pass likhe dibo, jate pore oi method ba class use korte pari.
+
+
+
+
+Inheritance:
+ekta class er access onno kono class e diye dibo inheritance dara.
+Parent class(base class) <--inherit--- Child class(derive class)
+ 
+
