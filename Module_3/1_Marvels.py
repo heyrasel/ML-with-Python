@@ -37,17 +37,45 @@
 # Default constructor
 # Constructor is used for intialize classes variable
 
-class Avenger:
-    def __init__(self): # evabe init likhte hoy constructor initialize korar jonno.
-        self.name = "Tony Stark" # self is like this keyword in java.
-        self.power = "Flying"
+# class Avenger:
+#     def __init__(self): # evabe init likhte hoy constructor initialize korar jonno.
+#         self.name = "Tony Stark" # self is like this keyword in java.
+#         self.power = "Flying"
     
-    def introduce(self):
-        print(f"My name is: {self.name}")
+#     def introduce(self):
+#         print(f"My name is: {self.name}")
+
+#     def skill(self):
+#         print(f"My skill is: {self.power}")
+
+# ironman = Avenger()
+# ironman.introduce() # ekhon ar name pass kora lagche na karon default hisebe to deyai ache
+# ironman.skill()
+
+
+
+
+
+
+
+
+
+# Parameterized constructor
+# Constructor is used for intialize classes variable
+
+class Avenger:
+    def __init__(self,name, power):
+        self.name = name
+        self.power = power
+    
+    def introduce(self, mood):
+        print(f"My name is: {self.name}, my mood is: {mood}") # mood er jonno self use kora lagbe na karon eta just ei method er parameter
 
     def skill(self):
         print(f"My skill is: {self.power}")
 
-ironman = Avenger()
-ironman.introduce() # ekhon ar name pass kora lagche na karon default hisebe to deyai ache
-ironman.skill()
+hulk = Avenger("Hulk","Stronger")
+spiderman = Avenger("Peter Parker", 'Shooting Web')
+hulk.introduce("Angry")
+hulk.skill()
+spiderman.introduce('Bad')
