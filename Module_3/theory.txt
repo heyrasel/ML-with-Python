@@ -41,3 +41,50 @@ ekta class er access onno kono class e diye dibo inheritance dara.
 Parent class(base class) <--inherit--- Child class(derive class)
  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Class_2:::::::::::::::::::::::::::::::::::::::::
+
+--->>See the pdf resource shared in the website.
+
+Inheritance:
+
+Ekta class er jinishpotro onno class theke access kora.
+Parent class: ei class er access child class(base class/derived class) ke dibo.
+
+
+Multiple Inheritance:
+Java te multiple inheritance possible na but python e multiple inheritance possible.
+
+Multi-leve inheritance:
+ekta class er access arekta class e and arekta class er access arekta class e.
+
+Hierarchical Inheritance:
+Jokhon ekta class er access eker odhik class ke dibo tokhn eta Hierarchical inheritance hobe.
+
+
+
+Encapsulation:
+Encapsulation mane jokhn kono class e class variable and method 2tai thake tokhn oi class ke encapsulated class bola hoy.
+Encapsulation dara data accessability ke control kora jai like private,public,default etc diye.
+
+
+Polymorphism:
+ek e function name different class e use korbo.
