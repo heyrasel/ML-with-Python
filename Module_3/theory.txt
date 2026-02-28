@@ -73,7 +73,7 @@ Parent class: ei class er access child class(base class/derived class) ke dibo.
 Multiple Inheritance:
 Java te multiple inheritance possible na but python e multiple inheritance possible.
 
-Multi-leve inheritance:
+Multi-level inheritance:
 ekta class er access arekta class e and arekta class er access arekta class e.
 
 Hierarchical Inheritance:
