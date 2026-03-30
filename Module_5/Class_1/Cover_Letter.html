@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cover Letter – Md. Rasel Ali</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #13161e;
+    --border: #1e2330;
+    --accent: #4fd1c5;
+    --accent-dim: rgba(79, 209, 197, 0.12);
+    --accent-glow: rgba(79, 209, 197, 0.25);
+    --text-primary: #e8eaf0;
+    --text-secondary: #8a90a2;
+    --text-muted: #4a5060;
+    --gold: #e2b96f;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  /* Geometric background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(79,209,197,0.07) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(79,209,197,0.05),
+      0 40px 80px rgba(0,0,0,0.6),
+      0 0 60px rgba(79,209,197,0.04);
+    animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Header ── */
+  .header {
+    padding: 52px 60px 44px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--accent), transparent);
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .name-block h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.6rem;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .name-block .title-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid rgba(79,209,197,0.2);
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-top: 10px;
+  }
+
+  .name-block .title-tag::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .contact-block {
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .contact-block .date {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+    font-style: italic;
+    font-family: 'DM Serif Display', serif;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    font-weight: 300;
+  }
+
+  .contact-item .dot {
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  .body {
+    padding: 48px 60px;
+  }
+
+  .recipient {
+    margin-bottom: 36px;
+    padding-bottom: 28px;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .recipient .label {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .recipient .to-line {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--gold);
+  }
+
+  .salutation {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 28px;
+    font-weight: 400;
+  }
+
+  .letter-body p {
+    font-size: 0.92rem;
+    line-height: 1.85;
+    color: #c0c5d4;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .letter-body p strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .letter-body p .highlight {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* Achievement strip */
+  .achievement-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 28px 0;
+  }
+
+  .ach-item {
+    background: var(--bg);
+    padding: 18px 20px;
+    text-align: center;
+    transition: background 0.2s;
+  }
+
+  .ach-item:hover { background: var(--accent-dim); }
+
+  .ach-item .ach-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .ach-item .ach-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  /* Closing */
+  .closing {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .closing-text p {
+    font-size: 0.92rem;
+    color: #c0c5d4;
+    font-weight: 300;
+    margin-bottom: 6px;
+  }
+
+  .signature {
+    text-align: right;
+  }
+
+  .signature .sig-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+  }
+
+  .signature .sig-role {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* Footer bar */
+  .footer-bar {
+    padding: 14px 60px;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bar .links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-bar a {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-bar a:hover { color: var(--accent); }
+
+  .footer-bar .cgpa-badge {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+
+  .footer-bar .cgpa-badge span {
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  @media (max-width: 600px) {
+    .header, .body, .footer-bar { padding-left: 28px; padding-right: 28px; }
+    .header-inner { flex-direction: column; }
+    .contact-block { text-align: left; }
+    .contact-item { justify-content: flex-start; }
+    .achievement-strip { grid-template-columns: 1fr; }
+    .closing { flex-direction: column; gap: 20px; align-items: flex-start; }
+    .signature { text-align: left; }
+    .footer-bar { flex-direction: column; gap: 10px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <div class="header-inner">
+      <div class="name-block">
+        <h1>Md. Rasel Ali</h1>
+        <div class="title-tag">BSc. Computer Science &amp; Engineering</div>
+      </div>
+      <div class="contact-block">
+        <div class="date">March 29, 2026</div>
+        <div class="contact-item"><span class="dot"></span>83raselmahmud@gmail.com</div>
+        <div class="contact-item"><span class="dot"></span>+880 1771-821343</div>
+        <div class="contact-item"><span class="dot"></span>Dhaka, Bangladesh</div>
+        <div class="contact-item"><span class="dot"></span>github.com/heyrasel</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="body">
+
+    <div class="recipient">
+      <div class="label">Addressed to</div>
+      <div class="to-line">The Hiring Manager / Recruitment Team</div>
+    </div>
+
+    <div class="salutation">Dear Hiring Manager,</div>
+
+    <div class="letter-body">
+
+      <p>
+        I am writing to express my strong interest in joining your organization as a
+        <strong>Software Engineer / Data Science Intern or Junior Developer</strong>. Currently completing my
+        Bachelor's degree in Computer Science and Engineering at <strong>United International University</strong>,
+        with an expected graduation in 2026, I bring a combination of strong academic standing,
+        hands-on project experience, and a genuine passion for solving real-world problems through technology.
+      </p>
+
+      <p>
+        Throughout my studies, I have developed proficiency across a broad technical stack — from
+        <span class="highlight">Python, JavaScript, C++, and Java</span> on the language side, to
+        <span class="highlight">deep learning, RAG pipelines, and full-stack web development</span>
+        in practice. My final-year design project, <strong>RaR-MoE</strong>, exemplifies this depth:
+        a multi-modal AI framework combining 3D UNet segmentation with a Retrieval-Augmented Generation
+        pipeline (PubMedBERT) and a Hierarchical Mixture-of-Experts module to automate diagnostic
+        report generation from chest CT scans — research that required both rigorous ML engineering
+        and a clear understanding of real clinical needs.
+      </p>
+
+      <p>
+        Beyond research, I have built and deployed practical software: a <strong>VGG16-based vegetable
+        detection model</strong> achieving 97% classification accuracy, a <strong>brain tumor detection
+        system</strong> from MRI images, and a <strong>UIU CGPA Calculator</strong> built with
+        React/TypeScript and deployed with CI/CD on Vercel — used by students campus-wide. My
+        competitive programming background (Codeforces, NCPC 2023) has sharpened my ability to
+        reason algorithmically under pressure, a skill I carry into every engineering challenge.
+      </p>
+
+      <div class="achievement-strip">
+        <div class="ach-item">
+          <span class="ach-num">3.89</span>
+          <span class="ach-label">Major CGPA</span>
+        </div>
+        <div class="ach-item">
+          <span class="ach-num">50%</span>
+          <span class="ach-label">Merit Scholarship · Top 5%</span>
+        </div>
+        <div class="ach-item">
+          <span class="ach-num">5+</span>
+          <span class="ach-label">Deployed Projects</span>
+        </div>
+      </div>
+
+      <p>
+        I am a fast learner, comfortable navigating ambiguity, and I take ownership of the work I
+        commit to. I thrive in collaborative environments — my FYDP was built as a five-person team
+        effort, and I contributed across architecture design, model training, and evaluation strategy.
+        I am excited by the opportunity to bring this same energy and technical rigor to your team.
+      </p>
+
+      <p>
+        I would welcome the chance to discuss how my background aligns with your needs. Please find
+        my CV attached, and feel free to reach out at any time.
+      </p>
+
+    </div>
+
+    <div class="closing">
+      <div class="closing-text">
+        <p>With appreciation for your time and consideration,</p>
+        <p>Sincerely,</p>
+      </div>
+      <div class="signature">
+        <div class="sig-name">Md. Rasel Ali</div>
+        <div class="sig-role">UIU · BSc CSE · Data Science Major</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer-bar">
+    <div class="links">
+      <a href="https://github.com/heyrasel" target="_blank">GitHub</a>
+      <a href="https://codeforces.com/profile/RaselMahmud" target="_blank">Codeforces</a>
+      <a href="https://uiu-cgpa-calculator-a.vercel.app" target="_blank">Live Project</a>
+    </div>
+    <div class="cgpa-badge">Overall CGPA <span>3.65</span> &nbsp;·&nbsp; Major CGPA <span>3.89</span> / 4.0</div>
+  </div>
+
+</div>
+
+</body>
+</html>
