@@ -1,0 +1,4 @@
+Name,Age,Bamboo_Eat_Daily
+Pandy,12,45
+Bamboo,4,53
+Fuzzy,5,12
